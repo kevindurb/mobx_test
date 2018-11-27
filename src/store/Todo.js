@@ -1,4 +1,4 @@
-import { observable } from 'mobx';
+import { observable, action } from 'mobx';
 
 class Todo {
   constructor(text = '') {
@@ -6,6 +6,10 @@ class Todo {
   }
 
   @observable text = '';
+
+  @action setText = (text) => {
+    this.text = text;
+  }
 }
 
 export default Todo;
