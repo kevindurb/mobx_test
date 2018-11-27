@@ -4,8 +4,10 @@ import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import TodoList from './TodoList';
+import todoCollection from '../stores/todoCollection';
 
-const App = ({ store }) => (
+
+const App = () => (
   <div>
     <AppBar position="static">
       <Toolbar>
@@ -15,12 +17,12 @@ const App = ({ store }) => (
         >
           Todo
         </Typography>
-        <Button onClick={store.addTodo}>
+        <Button onClick={todoCollection.addTodo}>
           Add Todo
         </Button>
       </Toolbar>
     </AppBar>
-    <TodoList todos={store.todos}/>
+    <TodoList todos={todoCollection.todos}/>
   </div>
 );
 
