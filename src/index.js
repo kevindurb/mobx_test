@@ -1,9 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
+import App from './components/App';
+import Store from './store';
 
-console.log('hello');
+const store = new Store();
 
 render(
-  <div>hello world</div>,
+  <App store={store} />,
   document.getElementById('root'),
 );
