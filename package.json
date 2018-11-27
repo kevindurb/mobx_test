@@ -5,6 +5,9 @@
   "repository": "git@github.com:kevindurb/mobx_test.git",
   "author": "Kevin Durbin <kevindurb@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js"
+  },
   "dependencies": {
     "@babel/core": "^7.1.6",
     "@babel/preset-env": "^7.1.6",
